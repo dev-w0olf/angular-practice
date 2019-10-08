@@ -15,6 +15,9 @@ export class FlightSearchComponent implements OnInit {
   to: string;
   selectedFlight: Flight;
 
+  basket: object = {
+  };
+
   constructor(private flightService: FlightService) {
   }
 

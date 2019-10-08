@@ -4,20 +4,25 @@ import {FormsModule} from '@angular/forms';
 import {CityPipe} from './pipes/city.pipe';
 import {StatusColorPipe} from './pipes/statusColor.pipe';
 import {StatusfilterPipe} from './pipes/statusfilter.pipe';
+import {BrowserModule} from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    CityPipe,
-    StatusColorPipe,
-    StatusfilterPipe],
+
   imports: [
     CommonModule,
     FormsModule
   ],
+  declarations: [
+    CityPipe,
+    StatusColorPipe,
+    StatusfilterPipe],
   exports: [
     CityPipe,
     StatusColorPipe,
-    StatusfilterPipe]
+    StatusfilterPipe,
+    FormsModule
+    ]
 })
 export class SharedModule {
 }
