@@ -1,237 +1,286 @@
 {
-	"flight": [
-		{
-			"id": 1,
-			"from": "Graz",
-			"to": "Mallorca",
-			"date": "2019-10-06T04:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 2,
-			"from": "Graz",
-			"to": "Hamburg",
-			"date": "2019-10-03T04:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 3,
-			"from": "Hamburg",
-			"to": "Graz",
-			"date": "2019-10-03T05:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 4,
-			"from": "Hamburg",
-			"to": "Graz",
-			"date": "2019-10-03T07:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 5,
-			"from": "Hamburg",
-			"to": "Graz",
-			"date": "2019-10-03T10:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 6,
-			"from": "Wien",
-			"to": "Berlin",
-			"date": "2019-10-03T10:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 7,
-			"from": "Wien",
-			"to": "Berlin",
-			"date": "2019-10-03T11:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 8,
-			"from": "Wien",
-			"to": "Berlin",
-			"date": "2019-10-03T12:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 9,
-			"from": "Wien",
-			"to": "München",
-			"date": "2019-10-03T13:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 10,
-			"from": "Wien",
-			"to": "München",
-			"date": "2019-10-03T14:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 11,
-			"from": "Wien",
-			"to": "München",
-			"date": "2019-10-03T15:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 12,
-			"from": "Wien",
-			"to": "Zürich",
-			"date": "2019-10-03T16:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 13,
-			"from": "Wien",
-			"to": "Zürich",
-			"date": "2019-10-03T17:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 14,
-			"from": "Wien",
-			"to": "Zürich",
-			"date": "2019-10-03T18:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 15,
-			"from": "Wien",
-			"to": "Bern",
-			"date": "2019-10-03T19:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 16,
-			"from": "Wien",
-			"to": "Bern",
-			"date": "2019-10-03T20:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 17,
-			"from": "Wien",
-			"to": "Bern",
-			"date": "2019-10-03T21:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 18,
-			"from": "Wien",
-			"to": "Frankfurt",
-			"date": "2019-10-03T22:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 19,
-			"from": "Wien",
-			"to": "Frankfurt",
-			"date": "2019-10-03T23:34:45.7018969+00:00",
-			"delayed": false
-		},
-		{
-			"id": 20,
-			"from": "Wien",
-			"to": "Frankfurt",
-			"date": "2019-10-04T00:34:45.7018969+00:00",
-			"delayed": false
-		}
-	],
-	"passenger": [
-		{
-			"id": 1,
-			"name": "Muster",
-			"firstName": "Max",
-			"bonusMiles": 10000,
-			"passengerStatus": "B"
-		},
-		{
-			"id": 2,
-			"name": "Sorglos",
-			"firstName": "Susi",
-			"bonusMiles": 20000,
-			"passengerStatus": "A"
-		},
-		{
-			"id": 3,
-			"name": "Muster",
-			"firstName": "Anna",
-			"bonusMiles": 10000,
-			"passengerStatus": "B"
-		},
-		{
-			"id": 4,
-			"name": "Doe",
-			"firstName": "John",
-			"bonusMiles": 5000,
-			"passengerStatus": "C"
-		},
-		{
-			"id": 5,
-			"name": "Doe",
-			"firstName": "Jane",
-			"bonusMiles": 15000,
-			"passengerStatus": "A"
-		},
-		{
-			"id": 6,
-			"name": "Murauer",
-			"firstName": "Peter",
-			"bonusMiles": 1000,
-			"passengerStatus": "A"
-		},
-		{
-			"id": 7,
-			"name": "Murauer",
-			"firstName": "Anna",
-			"bonusMiles": 1000,
-			"passengerStatus": "A"
-		},
-		{
-			"id": 8,
-			"name": "Meister",
-			"firstName": "Peter",
-			"bonusMiles": 1000,
-			"passengerStatus": "A"
-		},
-		{
-			"id": 9,
-			"name": "Meister",
-			"firstName": "Anna",
-			"bonusMiles": 1000,
-			"passengerStatus": "A"
-		},
-		{
-			"id": 10,
-			"name": "Mustermann",
-			"firstName": "Peter",
-			"bonusMiles": 1000,
-			"passengerStatus": "A"
-		},
-		{
-			"id": 11,
-			"name": "Mustermann",
-			"firstName": "Anna",
-			"bonusMiles": 1000,
-			"passengerStatus": "A"
-		},
-		{
-			"id": 12,
-			"name": "Murmann",
-			"firstName": "Peter",
-			"bonusMiles": 1000,
-			"passengerStatus": "A"
-		},
-		{
-			"id": 13,
-			"name": "Murmann",
-			"firstName": "Anna",
-			"bonusMiles": 1000,
-			"passengerStatus": "A"
-		}
-	]
+  "flight": [
+    {
+      "id": 1,
+      "from": "Graz",
+      "to": "Mallorca",
+      "date": "2019-10-06T04:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 2,
+      "from": "Graz",
+      "to": "Berlin",
+      "date": "2019-10-03T04:38:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 3,
+      "from": "Hamburg",
+      "to": "Graz",
+      "date": "2019-10-03T05:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 4,
+      "from": "Hamburg",
+      "to": "Graz",
+      "date": "2019-10-03T07:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 5,
+      "from": "Hamburg",
+      "to": "Graz",
+      "date": "2019-10-03T10:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 6,
+      "from": "Wien",
+      "to": "Berlin",
+      "date": "2019-10-03T10:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 7,
+      "from": "Wien",
+      "to": "Berlin",
+      "date": "2019-10-03T11:35:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 8,
+      "from": "Wien",
+      "to": "Graz",
+      "date": "2019-10-03T12:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 9,
+      "from": "Wien",
+      "to": "München",
+      "date": "2019-10-03T13:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 10,
+      "from": "Wien",
+      "to": "München",
+      "date": "2019-10-03T14:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 11,
+      "from": "Wien",
+      "to": "München",
+      "date": "2019-10-03T15:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 12,
+      "from": "Wien",
+      "to": "Zürich",
+      "date": "2019-10-03T16:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 13,
+      "from": "Wien",
+      "to": "Zürich",
+      "date": "2019-10-03T17:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 14,
+      "from": "Wien",
+      "to": "Zürich",
+      "date": "2019-10-03T18:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 15,
+      "from": "Wien",
+      "to": "Bern",
+      "date": "2019-10-03T19:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 16,
+      "from": "Wien",
+      "to": "Bern",
+      "date": "2019-10-03T20:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 17,
+      "from": "Wien",
+      "to": "Bern",
+      "date": "2019-10-03T21:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 18,
+      "from": "Wien",
+      "to": "Frankfurt",
+      "date": "2019-10-03T22:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 19,
+      "from": "Wien",
+      "to": "Frankfurt",
+      "date": "2019-10-03T23:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 20,
+      "from": "Wien",
+      "to": "Frankfurt",
+      "date": "2019-10-04T00:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 21,
+      "from": "Graz",
+      "to": "Wien",
+      "date": "2019-10-03T04:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 22,
+      "from": "Graz",
+      "to": "Dortmund",
+      "date": "2019-10-05T04:34:45.7018969+00:00",
+      "delayed": false
+    },
+    {
+      "id": 23,
+      "from": "Graz",
+      "to": "Hamburg",
+      "date": "2019-11-09T08:34:45.7018969+00:00",
+      "delayed": true
+    },
+    {
+      "id": 24,
+      "from": "Graz",
+      "to": "Dortmund",
+      "date": "2019-10-03T04:34:45.7018969+00:00",
+      "delayed": true
+    },
+    {
+      "id": 25,
+      "from": "Graz",
+      "to": "Amsterdam",
+      "date": "2019-10-05T04:34:45.7018969+00:00",
+      "delayed": true
+    },
+    {
+      "id": 26,
+      "from": "Graz",
+      "to": "Moskau",
+      "date": "2019-10-03T04:34:45.7018969+00:00",
+      "delayed": true
+    },
+    {
+      "id": 27,
+      "from": "Berlin",
+      "to": "Graz",
+      "date": "2019-12-03T04:34:45.7018969+00:00",
+      "delayed": false
+    }
+  ],
+  "passenger": [
+    {
+      "id": 1,
+      "name": "Muster",
+      "firstName": "Max",
+      "bonusMiles": 10000,
+      "passengerStatus": "B"
+    },
+    {
+      "id": 2,
+      "name": "Sorglos",
+      "firstName": "Susi",
+      "bonusMiles": 20000,
+      "passengerStatus": "A"
+    },
+    {
+      "id": 3,
+      "name": "Muster",
+      "firstName": "Anna",
+      "bonusMiles": 10000,
+      "passengerStatus": "B"
+    },
+    {
+      "id": 4,
+      "name": "Doe",
+      "firstName": "John",
+      "bonusMiles": 5000,
+      "passengerStatus": "C"
+    },
+    {
+      "id": 5,
+      "name": "Doe",
+      "firstName": "Jane",
+      "bonusMiles": 15000,
+      "passengerStatus": "A"
+    },
+    {
+      "id": 6,
+      "name": "Murauer",
+      "firstName": "Peter",
+      "bonusMiles": 1000,
+      "passengerStatus": "A"
+    },
+    {
+      "id": 7,
+      "name": "Murauer",
+      "firstName": "Anna",
+      "bonusMiles": 1000,
+      "passengerStatus": "A"
+    },
+    {
+      "id": 8,
+      "name": "Meister",
+      "firstName": "Peter",
+      "bonusMiles": 1000,
+      "passengerStatus": "A"
+    },
+    {
+      "id": 9,
+      "name": "Meister",
+      "firstName": "Anna",
+      "bonusMiles": 1000,
+      "passengerStatus": "A"
+    },
+    {
+      "id": 10,
+      "name": "Mustermann",
+      "firstName": "Peter",
+      "bonusMiles": 1000,
+      "passengerStatus": "A"
+    },
+    {
+      "id": 11,
+      "name": "Mustermann",
+      "firstName": "Anna",
+      "bonusMiles": 1000,
+      "passengerStatus": "A"
+    },
+    {
+      "id": 12,
+      "name": "Murmann",
+      "firstName": "Peter",
+      "bonusMiles": 1000,
+      "passengerStatus": "A"
+    },
+    {
+      "id": 13,
+      "name": "Murmann",
+      "firstName": "Anna",
+      "bonusMiles": 1000,
+      "passengerStatus": "A"
+    }
+  ]
 }
