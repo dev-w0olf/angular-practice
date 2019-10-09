@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
+import {BehaviorSubject, from, Observable} from 'rxjs';
 import {Flight} from '../../entities/flight';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 
@@ -9,6 +9,10 @@ import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 export class FlightService {
 
   flights: Flight[] = [];
+  filterState$ = new BehaviorSubject<{ from: string, to: string }>({
+    from: '',
+    to: ''
+  });
 
   constructor(private http: HttpClient) {
   }
@@ -31,15 +35,10 @@ export class FlightService {
 
     const params = new HttpParams()
       .set('from', from)
-    if (to) {
-      params.set('to', to);
-    }
-
-    const headers = new HttpHeaders()
-      .set('Accept', 'application/json');
+      .set('to', to);
 
     return this.http
-      .get<Flight[]>(url, {params, headers});
+      .get<Flight[]>(url, {params});
 
   }
 

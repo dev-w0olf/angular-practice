@@ -7,4 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent  {
   toggleFlightSearch = false;
+  toggleFlightReactive = false;
+  toggleFlightEdit = false;
 }

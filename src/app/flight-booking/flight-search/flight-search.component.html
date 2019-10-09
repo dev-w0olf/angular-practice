@@ -122,7 +122,7 @@
                maxlength="15"
                pattern="[a-zA-Z ]*"
                [city]="['Graz', 'Hamburg', 'Wien', 'Berlin', 'Dortmund','Rom']"
-               asyncCity
+
         >
         <div *ngIf="
                     f?.controls['from']?.touched &&
@@ -157,7 +157,7 @@
                minlength="3"
                pattern="[a-zA-Z ]*"
                [city]="['Graz', 'Hamburg', 'Wien', 'Berlin', 'Dortmund','Rom']"
-               asyncCity
+
         >
         <div *ngIf="
                     f?.controls['to']?.touched &&
@@ -191,7 +191,7 @@
           (click)="search()"
           class="btn btn-default">Search</button>
       </div>
-      <div *ngIf="f?.hasError('roundTrip')">From and To must be different.</div>
+      <div *ngIf="f?.controls?.touched &&f?.hasError('roundTrip')">From and To must be different.</div>
     </form>
   </div>
 </div>

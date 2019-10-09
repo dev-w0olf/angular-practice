@@ -15,6 +15,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="ti-panel"></i>
                         <p>Stats</p>
+                      <p *ngIf="filter$ | async as filter">from: {{ filter.from  }} to: {{ filter.to }}</p>
                     </a>
                 </li>
                 <li class="dropdown">

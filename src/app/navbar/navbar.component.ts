@@ -1,19 +1,27 @@
-import { Component, OnInit, Renderer, ViewChild, ElementRef } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {Observable} from "rxjs";
+import {FlightService} from "../flight-booking/services/flight.service";
 
 @Component({
+  // tslint:disable-next-line:component-selector
     selector: 'navbar-cmp',
     templateUrl: 'navbar.component.html'
 })
-export class NavbarComponent {
-    
-    private sidebarVisible: boolean = false;
+export class NavbarComponent implements OnInit {
+
+  constructor(private flightService: FlightService) {}
+  filter$: Observable<{ from: string, to: string}>;
+
+    private sidebarVisible = false;
+
+  ngOnInit(): void {
+    this.filter$ = this.flightService.filterState$;
+  }
 
     sidebarToggle(){
-        var body = document.getElementsByTagName('body')[0];
+        const body = document.getElementsByTagName('body')[0];
 
-        if(this.sidebarVisible == false){
+        if (this.sidebarVisible === false) {
             body.classList.add('nav-open');
             this.sidebarVisible = true;
         } else {

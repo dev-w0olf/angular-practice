@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CityPipe} from './pipes/city.pipe';
 import {StatusColorPipe} from './pipes/statusColor.pipe';
 import {StatusfilterPipe} from './pipes/statusfilter.pipe';
@@ -14,8 +14,9 @@ import { RoundtripValidatorDirective } from './validators/roundtrip-validator.di
 
   imports: [
     CommonModule,
-    FormsModule
-  ],
+    FormsModule,
+    ReactiveFormsModule
+   ],
   declarations: [
     CityPipe,
     StatusColorPipe,
@@ -28,6 +29,7 @@ import { RoundtripValidatorDirective } from './validators/roundtrip-validator.di
     StatusColorPipe,
     StatusfilterPipe,
     FormsModule,
+    ReactiveFormsModule,
     CityValidatorDirective,
     AsyncCityValidatorDirective,
     RoundtripValidatorDirective

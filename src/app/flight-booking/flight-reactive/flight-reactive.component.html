@@ -1,0 +1,7 @@
+<ng-container *ngIf="{timer:timer$ | async} as componentData">
+  <div>
+    <p>Subscription1: {{componentData.timer}}</p>
+    <p>Subscription2: {{componentData.timer}}</p>
+  </div>
+</ng-container>
+

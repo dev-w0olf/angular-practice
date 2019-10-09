@@ -12,10 +12,22 @@
           (click)="toggleFlightSearch = ! toggleFlightSearch "
           class="btn btn-default">Toggle Flight Search
         </button>
+        |
+        <button
+          (click)="toggleFlightReactive = ! toggleFlightReactive "
+          class="btn btn-default">Toggle Reactive
+        </button>
+        |
+        <button
+          (click)="toggleFlightEdit = ! toggleFlightEdit "
+          class="btn btn-default">Toggle Edit
+        </button>
         <div>
           <p></p>
         </div>
+        <app-flight-edit *ngIf="toggleFlightEdit"></app-flight-edit>
         <app-flight-search *ngIf="toggleFlightSearch"></app-flight-search>
+        <app-flight-reactive *ngIf="toggleFlightReactive"></app-flight-reactive>
       </div>
   </div>
 
