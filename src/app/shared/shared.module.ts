@@ -6,6 +6,9 @@ import {StatusColorPipe} from './pipes/statusColor.pipe';
 import {StatusfilterPipe} from './pipes/statusfilter.pipe';
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
+import { CityValidatorDirective } from './validators/city-validator.directive';
+import { AsyncCityValidatorDirective } from './validators/async-city-validator.directive';
+import { RoundtripValidatorDirective } from './validators/roundtrip-validator.directive';
 
 @NgModule({
 
@@ -16,13 +19,19 @@ import {HttpClientModule} from '@angular/common/http';
   declarations: [
     CityPipe,
     StatusColorPipe,
-    StatusfilterPipe],
+    StatusfilterPipe,
+    CityValidatorDirective,
+    AsyncCityValidatorDirective,
+    RoundtripValidatorDirective],
   exports: [
     CityPipe,
     StatusColorPipe,
     StatusfilterPipe,
-    FormsModule
-    ]
+    FormsModule,
+    CityValidatorDirective,
+    AsyncCityValidatorDirective,
+    RoundtripValidatorDirective
+  ]
 })
 export class SharedModule {
 }

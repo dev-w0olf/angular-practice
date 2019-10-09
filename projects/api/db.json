@@ -188,6 +188,13 @@
       "to": "Graz",
       "date": "2019-12-03T04:34:45.7018969+00:00",
       "delayed": false
+    },
+    {
+      "id": 28,
+      "from": "Hamburg",
+      "to": "Wien",
+      "date": "2019-10-03T05:34:45.7018969+00:00",
+      "delayed": false
     }
   ],
   "passenger": [

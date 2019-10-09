@@ -31,7 +31,9 @@ export class FlightService {
 
     const params = new HttpParams()
       .set('from', from)
-      .set('to', to);
+    if (to) {
+      params.set('to', to);
+    }
 
     const headers = new HttpHeaders()
       .set('Accept', 'application/json');
