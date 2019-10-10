@@ -35,7 +35,9 @@ export class FlightSearchComponent implements OnInit {
 
   search(): void {
     console.log('Search started!');
-
+    if (!this.from || !this.to) {
+      return;
+    }
     this.flightService.filterState$.next({
       from: this.from,
       to: this.to
