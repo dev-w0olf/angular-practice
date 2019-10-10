@@ -12,7 +12,7 @@
       "from": "Graz",
       "to": "Berlin",
       "date": "2019-10-04T04:38:45.7018969+00:00",
-      "delayed": false
+      "delayed": true
     },
     {
       "id": 3,
@@ -54,7 +54,7 @@
       "from": "Wien",
       "to": "Graz",
       "date": "2019-10-03T12:34:45.7018969+00:00",
-      "delayed": false
+      "delayed": true
     },
     {
       "id": 9,
@@ -73,8 +73,8 @@
     {
       "id": 11,
       "from": "Wien",
-      "to": "München",
-      "date": "2019-10-03T15:34:45.7018969+00:00",
+      "to": "Berlin",
+      "date": "2019-10-03T12:34:45.7018969+00:00",
       "delayed": false
     },
     {
@@ -143,8 +143,8 @@
     {
       "id": 21,
       "from": "Graz",
-      "to": "Wien",
-      "date": "2019-10-03T04:34:45.7018969+00:00",
+      "to": "München",
+      "date": "2019-10-04T04:34:45.7018969+00:00",
       "delayed": false
     },
     {
@@ -157,9 +157,9 @@
     {
       "id": 23,
       "from": "Graz",
-      "to": "Hamburg",
+      "to": "Wien",
       "date": "2019-11-08T08:34:45.7018969+00:00",
-      "delayed": false
+      "delayed": true
     },
     {
       "id": 24,

@@ -1,7 +1,7 @@
 import {AbstractControl, ValidationErrors, ValidatorFn} from '@angular/forms';
 
 export function validateCity(c: AbstractControl): ValidationErrors | null {
-  const validCities: string[] = ['Wien', 'Graz', 'Hamburg', 'Berlin'];
+  const validCities: string[] = ['Graz', 'Wien', 'Hamburg', 'Dortmund', 'Mallorca', 'Berlin', 'Zürich', 'München', 'Frankfurt'];
   if (c.value && validCities.indexOf(c.value) === -1) {
     return {
       city: {

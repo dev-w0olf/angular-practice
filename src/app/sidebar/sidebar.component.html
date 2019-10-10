@@ -8,22 +8,33 @@
         </a>
     </div>
     <ul class="nav">
-        <li>
-            <a>
+        <li routerLinkActive="active">
+            <a [routerLink]="['/home']" >
                 <i class="ti-home"></i>
                 <p>Home</p>
             </a>
         </li>
 
-        <li>
-            <a>
-                <i class="ti-arrow-top-right"></i>
+        <li routerLinkActive="active">
+            <a [routerLink]="['/flight-search']">
+                <i class="ti-layout-list-thumb"></i>
                 <p>Flights</p>
             </a>
         </li>
-
-        <li>
-            <a routerLink="/flight-booking/passenger-search">
+      <li routerLinkActive="active">
+        <a [routerLink]="['/flight-edit']">
+          <i class="ti-pencil"></i>
+          <p>Flight-Edit</p>
+        </a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/flight-reactive']">
+          <i class="ti-arrow-top-right"></i>
+          <p>Flight-Reactive</p>
+        </a>
+      </li>
+        <li routerLinkActive="active">
+            <a [routerLink]="['passenger-search']">
                 <i class="ti-user"></i>
                 <p>Passengers</p>
             </a>

@@ -6,6 +6,9 @@ import { FlightCardComponent } from './flight-card/flight-card.component';
 import { FlightStatusToggleComponent } from './flight-status-toggle/flight-status-toggle.component';
 import { FlightReactiveComponent } from './flight-reactive/flight-reactive.component';
 import { FlightEditComponent } from './flight-edit/flight-edit.component';
+import { PassengerSearchComponent } from './passenger-search/passenger-search.component';
+import {RouterModule} from "@angular/router";
+import { BasketComponent } from './basket/basket.component';
 
 @NgModule({
   declarations: [
@@ -13,11 +16,14 @@ import { FlightEditComponent } from './flight-edit/flight-edit.component';
     FlightCardComponent,
     FlightStatusToggleComponent,
     FlightReactiveComponent,
-    FlightEditComponent
+    FlightEditComponent,
+    PassengerSearchComponent,
+    BasketComponent
   ],
   imports: [
     SharedModule,
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     FlightSearchComponent,

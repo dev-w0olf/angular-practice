@@ -1,93 +1,117 @@
 <form [formGroup]="editForm">
-  <div class="form-group">
-    <label>ID:</label>
-    <input class="form-control"
-           formControlName="id"
-    >
-    <div
-      class="text-danger"
-      *ngIf="editForm.controls['id'].touched && editForm.controls['id'].hasError('required')">
-      Field is mandatory
+  <div class="card">
+    <div class="header">
+      <h2 class="title">Flight Edit</h2>
     </div>
-  </div>
-  <div class="form-group">
-    <label>From:</label>
-    <input class="form-control"
-           formControlName="from"
-    >
-    <div
-      class="text-danger"
-      *ngIf="editForm.controls['from'].touched && editForm.controls['from'].hasError('required')">
-      Field is mandatory
-    </div>
-    <div
-      class="text-danger"
-      *ngIf="editForm.controls['from'].touched && editForm.controls['from'].hasError('minlength')">
-      Field input min. 3 Letters.
-    </div>
-    <div
-      class="text-danger"
-      *ngIf="editForm.controls['from'].hasError('city')">
-      City not in Whitelist.
-    </div>
-    <div
-      class="text-danger"
-      *ngIf="this.editForm.controls['from'].touched &&
+    <div class="content">
+
+      <div class="form-group">
+        <label>Load Flight ID
+          <input class="form-control" name="loadId" formControlName="loadId">
+        </label>
+
+        <button (click)="load()"
+                class="btn btn-default">Load
+        </button>
+      </div>
+
+      <div class="form-group">
+        <label>ID:</label>
+        <input class="form-control"
+               formControlName="id"
+               readonly
+        >
+        <div
+          class="text-danger"
+          *ngIf="editForm.controls['id'].touched && editForm.controls['id'].hasError('required')">
+          Field is mandatory
+        </div>
+      </div>
+      <div class="form-group">
+        <label>From:</label>
+        <input class="form-control"
+               formControlName="from"
+        >
+        <div
+          class="text-danger"
+          *ngIf="editForm.controls['from'].touched && editForm.controls['from'].hasError('required')">
+          Field is mandatory
+        </div>
+        <div
+          class="text-danger"
+          *ngIf="editForm.controls['from'].touched && editForm.controls['from'].hasError('minlength')">
+          Field input min. 3 Letters.
+        </div>
+        <div
+          class="text-danger"
+          *ngIf="editForm.controls['from'].hasError('city')">
+          City not in Whitelist.
+        </div>
+        <div
+          class="text-danger"
+          *ngIf="this.editForm.controls['from'].touched &&
              this.editForm.controls['to'].touched &&
              this.editForm.controls['from'].dirty &&
              this.editForm.controls['to'].dirty &&
              this.editForm.controls['from'].value &&
              this.editForm.controls['to'].value &&
              editForm.hasError('roundTrip')">
-      From and To must be different!
-    </div>
-  </div>
-  <div class="form-group">
-    <label>To:</label>
-    <input class="form-control"
-           formControlName="to"
-    >
+          From and To must be different!
+        </div>
+      </div>
+      <div class="form-group">
+        <label>To:</label>
+        <input class="form-control"
+               formControlName="to"
+        >
 
-    <div
-      class="text-danger"
-      *ngIf="editForm.controls['to'].touched && editForm.controls['to'].hasError('required')">
-      Field is mandatory
-    </div>
-    <div
-      class="text-danger"
-      *ngIf="editForm.controls['to'].touched && editForm.controls['to'].hasError('minlength')">
-      Field input min. 3 Letters.
-    </div>
-    <div
-      class="text-danger"
-      *ngIf="editForm.controls['to'].hasError('city')">
-      City not in Whitelist.
-    </div>
-    <div
-      class="text-danger"
-      *ngIf="this.editForm.controls['from'].touched &&
+        <div
+          class="text-danger"
+          *ngIf="editForm.controls['to'].touched && editForm.controls['to'].hasError('required')">
+          Field is mandatory
+        </div>
+        <div
+          class="text-danger"
+          *ngIf="editForm.controls['to'].touched && editForm.controls['to'].hasError('minlength')">
+          Field input min. 3 Letters.
+        </div>
+        <div
+          class="text-danger"
+          *ngIf="editForm.controls['to'].hasError('city')">
+          City not in Whitelist.
+        </div>
+        <div
+          class="text-danger"
+          *ngIf="this.editForm.controls['from'].touched &&
              this.editForm.controls['to'].touched &&
              this.editForm.controls['from'].dirty &&
              this.editForm.controls['to'].dirty &&
              this.editForm.controls['from'].value &&
              this.editForm.controls['to'].value &&
              editForm.hasError('roundTrip')">
-      From and To must be different!
-    </div>
-  </div>
-  <div class="form-group">
-    <label>Date:</label>
-    <input class="form-control" value="2019-10-01T08:30"
-           formControlName="date"
-    >
-    <div
-      class="text-danger"
-      *ngIf="editForm.controls['date'].touched && editForm.controls['date'].dirty && editForm.controls['date'].hasError('required')">
-      Field is mandatory
-    </div>
-  </div>
+          From and To must be different!
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Date:</label>
+        <input class="form-control"
+               formControlName="date"
+        >
+        <div
+          class="text-danger"
+          *ngIf="editForm.controls['date'].touched && editForm.controls['date'].dirty && editForm.controls['date'].hasError('required')">
+          Field is mandatory
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Delayed</label><input type="checkbox" class="checkbox checkbox-circle" name="delayed" formControlName="delayed">
+      </div>
 
-  <button [disabled]="!editForm.valid"  (click)="save()"
-          class="btn btn-default">Save
-  </button>
+      <div class="form-group">
+        <button [disabled]="!editForm.valid" (click)="save()"
+                class="btn btn-default">Save
+        </button>
+      </div>
+    </div>
+  </div>
 </form>

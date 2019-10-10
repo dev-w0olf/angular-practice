@@ -9,7 +9,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
+    "e2e": "ng e2e --port 4299",
     "tsc": "tsc",
     "api": "json-server --watch ./projects/api/db.json"
   },

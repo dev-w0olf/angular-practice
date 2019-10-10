@@ -4,7 +4,9 @@ import {validateCity, validateCityParameterized} from '../../shared/validators/v
 import {validateRoundTrip} from '../../shared/validators/validateRoundTrip';
 
 import {HttpClient} from '@angular/common/http';
-import {Flight} from "../../entities/flight";
+import {ActivatedRoute} from '@angular/router';
+import {FlightService} from '../services/flight.service';
+import {delay, switchMap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-flight-edit',
@@ -14,23 +16,35 @@ import {Flight} from "../../entities/flight";
 export class FlightEditComponent implements OnInit {
   editForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder,
+              private http: HttpClient,
+              private route: ActivatedRoute,
+              private flightservice: FlightService) {
   }
 
   ngOnInit() {
 
-    const url = './api/flight/3';
-    const flight = this.http.get<Flight>(url).subscribe(flight => this.editForm.patchValue(flight));
-
-
     this.editForm = this.fb.group({
-      id: [
-        ''
-        , [Validators.required]],
+      id: ['' , [Validators.required]],
       from: ['', [Validators.required, Validators.minLength(3), validateCity]],
-      to: ['', [Validators.required, Validators.minLength(3), validateCityParameterized(['Graz', 'Wien'])]],
-      date: ['', [Validators.required]]
+      to: ['', [Validators.required, Validators.minLength(3),
+          validateCityParameterized(['Graz', 'Wien', 'Hamburg', 'Dortmund', 'Mallorca', 'Berlin', 'Zürich', 'München', 'Frankfurt'])]],
+      date: ['', [Validators.required]],
+      loadId: [''],
+      delayed: [false]
     });
+
+    this.route.paramMap.pipe(delay(500)).pipe(
+      switchMap( params => {
+        const id = parseInt(params.get('loadId'), 0);
+        return this.flightservice.findById(id);
+      })
+    ).subscribe(
+      flight => {
+        this.editForm.patchValue(flight);
+        this.editForm.controls['loadId'].setValue(flight.id);
+      }
+    );
 
     this.editForm.validator = validateRoundTrip;
 
@@ -45,6 +59,14 @@ export class FlightEditComponent implements OnInit {
 
   save(): void {
     console.log(this.editForm.value);
+    const {loadId, ...actualFlight} = this.editForm.value;
+    this.flightservice.save(this.editForm.controls['id'].value, actualFlight).subscribe();
+  }
+
+  load(): void {
+    const ID = this.editForm.controls['loadId'].value;
+    console.log(ID);
+    this.flightservice.findById(ID).subscribe(flight => this.editForm.patchValue(flight));
   }
 
 }

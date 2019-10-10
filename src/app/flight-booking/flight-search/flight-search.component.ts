@@ -26,6 +26,7 @@ export class FlightSearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
   }
 
   clearSelected(): void {

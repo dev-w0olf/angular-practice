@@ -63,4 +63,10 @@ export class FlightService {
     return this.http
       .post<Flight>(url, flight, {headers});
   }
+
+  findById(id: number): Observable<Flight> {
+
+    const url = './api/flight/' + id;
+    return this.http.get<Flight>(url);
+  }
 }
