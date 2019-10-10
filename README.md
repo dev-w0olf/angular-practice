@@ -1,3 +1,44 @@
+# Angular-Exercises
+
+![](https://process.filestackapi.com/cache=expiry:max/resize=width:700/c3STrF8ITAmQqrfA4c7L)
+
+## Angular
+
+Angular (commonly referred to as "Angular 2+" or "Angular v2 and above") is a TypeScript-based open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.
+
+### Architecture of an Angular application
+
+![](https://angular.io/generated/images/guide/architecture/overview2.png)<br>
+The main building blocks are modules, components, templates, metadata, data binding, directives, services and dependency injection.
+
+## Requirements:
+
+### 1\. Node.js
+
+Angular requires Node.js version 10.9.0 or later.<br>
+To check your version, run `node -v` in a terminal/console window. To get Node.js, go to nodejs.org.
+
+### 2\. npm package manager
+
+Angular, the Angular CLI, and Angular apps depend on features and functionality provided by libraries that are available as npm packages.<br>
+To download and install npm packages, you must have an npm package manager. This setup guide uses the npm client command line interface, which is installed with Node.js by default.
+
+To check that you have the npm client installed, run `npm -v` in a terminal/console window.
+
+### 3\. [Angular CLI](https://cli.angular.io)
+
+## The Angular CLI in terminal
+
+```
+> npm install -g @angular/cli  // Install angular-cli
+> ng new my-dream-app          // create a new app
+> cd my-dream-app              // cd into folder
+> ng serve                     // start App
+```
+
+Access your App in your browser via `localhost:4200`
+
+
 # Starter
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
