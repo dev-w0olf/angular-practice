@@ -39,7 +39,7 @@ To check that you have the npm client installed, run `npm -v` in a terminal/cons
 Access your App in your browser via `localhost:4200`
 
 
-# Starter
+# flightman
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 

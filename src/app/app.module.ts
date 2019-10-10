@@ -15,7 +15,7 @@ import {routes} from "./app.routes";
    imports: [
       SharedModule,
       FlightBookingModule,
-      BrowserModule,
+      BrowserModule.withServerTransition({ appId: 'serverApp' }),
       HttpClientModule,
      RouterModule.forRoot(routes)
    ],

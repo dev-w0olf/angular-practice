@@ -31,7 +31,7 @@ export class FlightService {
 
   find(from: string, to: string): Observable<Flight[]> {
     console.log('Search started!');
-    const url = './api/flight';
+    const url = 'http://localhost:3000/flight/';
 
     const params = new HttpParams()
       .set('from', from)
@@ -44,7 +44,7 @@ export class FlightService {
 
   save(id: number, flight: Flight): Observable<Flight> {
 
-    const url = './api/flight/';
+    const url = 'http://localhost:3000/flight/';
 
     const headers = new HttpHeaders()
       .set('Accept', 'application/json');
@@ -55,7 +55,7 @@ export class FlightService {
 
   create(flight: Flight): Observable<Flight> {
 
-    const url = './api/flight';
+    const url = 'http://localhost:3000/flight/';
 
     const headers = new HttpHeaders()
       .set('Accept', 'application/json');
@@ -66,7 +66,7 @@ export class FlightService {
 
   findById(id: number): Observable<Flight> {
 
-    const url = './api/flight/' + id;
+    const url = 'http://localhost:3000/flight/' + id;
     return this.http.get<Flight>(url);
   }
 }
