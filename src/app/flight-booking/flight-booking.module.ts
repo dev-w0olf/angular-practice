@@ -7,7 +7,8 @@ import { FlightStatusToggleComponent } from './flight-status-toggle/flight-statu
 import { FlightReactiveComponent } from './flight-reactive/flight-reactive.component';
 import { FlightEditComponent } from './flight-edit/flight-edit.component';
 import { PassengerSearchComponent } from './passenger-search/passenger-search.component';
-import {RouterModule} from "@angular/router";
+import { PassengerCardComponent } from './passenger-card/passenger-card.component';
+import {RouterModule} from '@angular/router';
 import { BasketComponent } from './basket/basket.component';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { BasketComponent } from './basket/basket.component';
     FlightReactiveComponent,
     FlightEditComponent,
     PassengerSearchComponent,
+    PassengerCardComponent,
     BasketComponent
   ],
   imports: [
