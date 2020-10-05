@@ -21,10 +21,6 @@ export const routes: Routes = [
     component: FlightSearchComponent
   },
   {
-    path: 'passenger-search',
-    component: PassengerSearchComponent
-  },
-  {
     path: 'flight-edit/:loadId',
     component: FlightEditComponent
   },
@@ -35,10 +31,13 @@ export const routes: Routes = [
   {
     path: 'flight-reactive',
     component: FlightReactiveComponent
-  }
-  ,
+  },
   {
     path: 'basket',
     component: BasketComponent
+  },
+  {
+    path: 'passenger-search',
+    component: PassengerSearchComponent
   }
 ];

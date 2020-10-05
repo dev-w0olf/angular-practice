@@ -1,0 +1,16 @@
+<div
+  class="card"
+  [ngStyle]="{'background-color': (selected) ? 'lightsteelblue' : 'white' }">
+
+  <div class="header">
+    <ng-content select=".top"></ng-content>
+    <h2 class="title">{{item.firstName}} - {{item.name}}</h2>
+  </div>
+
+  <div class="content">
+    <p>Passenger-No.: #{{item.id}}</p>
+    <ng-content select=".bottom"></ng-content>
+    <p> Status: {{item.passengerStatus}}</p>
+
+  </div>
+</div>
