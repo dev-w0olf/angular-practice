@@ -2,63 +2,61 @@ import {Injectable} from '@angular/core';
 import {BehaviorSubject, from, Observable} from 'rxjs';
 import {Passenger} from '../../entities/passenger';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
+import { first } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PassengerService {
-
   passengers: Passenger[] = [];
-  filterState$ = new BehaviorSubject<{ from: string, to: string }>({
-    from: '',
-    to: ''
-  });
+  params: HttpParams;
 
   constructor(private http: HttpClient) {
   }
 
   index(): Observable<Passenger[]> {
-   return this.http.get<Passenger[]>('http://localhost:3000/passenger');
+    const url = './api/passenger';
+   return this.http.get<Passenger[]>(url);
   }
 
-  // find(from: string, to: string): Observable<Flight[]> {
-  //   console.log('Search started!');
-  //   const url = './api/flight';
+  findByFirstname(firstName: string): Observable<Passenger[]> {
+    const url = './api/passenger';
+    const params = new HttpParams()
+      .set('firstName', firstName);
 
-  //   const params = new HttpParams()
-  //     .set('from', from)
-  //     .set('to', to);
+    return this.http.get<Passenger[]>(url, {params});
+  }
 
-  //   return this.http
-  //     .get<Flight[]>(url, {params});
+  findByName(name: string): Observable<Passenger[]> {
+    const url = './api/passenger';
+    
+    
+    if (typeof name.split(' ')[1] !== 'undefined') {
+      const params = new HttpParams()
+        .set('firstName', name.split(' ')[0])
+        .set('name', name.split(' ')[1]);
+    
+      return this.http.get<Passenger[]>(url, {params});
+    } else {
+      const params = new HttpParams()
+        .set('name', name);
 
-  // }
+      return this.http.get<Passenger[]>(url, {params});
+    }
+      
+  }
 
-  // save(id: number, flight: Flight): Observable<Flight> {
+  findByStatus(status: string): Observable<Passenger[]> {
+    const url = './api/passenger';
+    const params = new HttpParams()
+      .set('passengerStatus', status);
 
-  //   const url = './api/flight/';
+    return this.http.get<Passenger[]>(url, {params});
+  }
 
-  //   const headers = new HttpHeaders()
-  //     .set('Accept', 'application/json');
+  findByNumber(number: string): Observable<Passenger[]> {
+    const url = './api/passenger/' + number;
 
-  //   return this.http
-  //     .put<Flight>(url + id, flight, {headers});
-  // }
-
-  // create(flight: Flight): Observable<Flight> {
-
-  //   const url = './api/flight';
-
-  //   const headers = new HttpHeaders()
-  //     .set('Accept', 'application/json');
-
-  //   return this.http
-  //     .post<Flight>(url, flight, {headers});
-  // }
-
-  // findById(id: number): Observable<Flight> {
-
-  //   const url = './api/flight/' + id;
-  //   return this.http.get<Flight>(url);
-  // }
+    return this.http.get<Passenger[]>(url);
+  }
 }
