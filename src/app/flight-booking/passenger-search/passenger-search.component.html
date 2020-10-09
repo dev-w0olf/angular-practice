@@ -1,21 +1,18 @@
-<!-- <div class="card">
+<div class="card">
   <div class="header">
-    <h2 class="title">Flight Search</h2>
+    <h2 class="title">Passenger Search</h2>
   </div>
 
   <div class="content">
-    <form #f="ngForm"
-          roundTrip
+    <form #p="ngForm"
     >
       <div class="form-group">
-        <label>From:</label>
-        <input [(ngModel)]="from" class="form-control" name="from"
+        <label>First name, name, number or status of the passenger:</label>
+        <input [(ngModel)]="infos" class="form-control" name="name-number"
                required
                minlength="3"
                maxlength="15"
-               pattern="[a-zA-Z ]*"
-               [city]="['Graz', 'Hamburg', 'Wien', 'Berlin', 'Dortmund','Rom']"
-
+               placeholder="Search a passenger"
         >
       </div>
 
@@ -24,11 +21,14 @@
           [disabled]="f?.invalid"
           (click)="search()"
           class="btn btn-default">Search</button>
+        <button
+          (click)="viewAll()"
+          class="btn btn-default">View all</button>
       </div>
-      <div *ngIf="f?.controls?.touched &&f?.hasError('roundTrip')">From and To must be different.</div>
+      <div *ngIf="false">From and To must be different.</div>
     </form>
   </div>
-</div> -->
+</div>
 
 <div class="row">
   <div
